@@ -1,8 +1,7 @@
 # Ds_assignment
 
 #include <iostream> 
-using namespace std; 
-  
+using namespace std;  
 // A binary Tree node 
 struct node 
 { 
@@ -20,15 +19,14 @@ void printkdistanceNodeDown(node *root, int k)
     { 
         cout << root->data << endl; 
         return; 
-    } 
-  
-    
+    }    
     printkdistanceNodeDown(root->left, k-1); 
     printkdistanceNodeDown(root->right, k-1); 
 } 
   
 
 int printkdistanceNode(node* root, node* target , int k) 
+
 { 
     // Base Case 1: If tree is empty, return -1 
     if (root == NULL)
@@ -61,6 +59,8 @@ int printkdistanceNode(node* root, node* target , int k)
     } 
     return -1; 
 } 
+
+
 node *newnode(int data) 
 { 
     node *temp = new node; 
